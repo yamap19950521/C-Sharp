@@ -1,0 +1,19 @@
+﻿@using 練習MVC.Models
+@{
+    ViewBag.Title = "ShowMembers";
+}
+
+<h2>ShowMembers</h2>
+
+<div>
+    @{
+        foreach (var member in ViewBag.Members as List<Member>) {
+            <label>會員編號:</label> @member.Id
+            <br />
+            <label>會員姓名:</label> @member.Name
+            <br />
+            <label>年齡:</label> @member.Age
+            <hr />
+        }
+    }
+</div>
